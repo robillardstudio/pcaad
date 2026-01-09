@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>L11</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<p><link href="markdown.css" rel="stylesheet"></link></p>
+<h1 id="arrays">Arrays</h1>
+<p>Reading for next class (Thursday):</p>
+<ul>
+<li><a href="http://worrydream.com/#!/LearnableProgramming">Learnable
+Programming</a></li>
+<li>bring recorded thoughts (type/write notes)</li>
+</ul>
+<hr />
+<h2 id="arrays-1">arrays</h2>
+<p>Hold a collection of data (an array or a list)</p>
+<ul>
+<li><a href="http://p5js.org/reference/p5/random">random
+element</a></li>
+</ul>
+<p>Draw a shape for each item in a collection</p>
+<ul>
+<li>plotting points, connecting lines</li>
+<li>var data = [5, 3, 7, 2, 9];</li>
+<li>the value of data[0] is 5.</li>
+<li>the value of data[4] is 9.</li>
+<li><a href="data.html">data</a> - <a
+href="https://editor.p5js.org/mattlewis/sketches/087NZxUAx">editor</a></li>
+<li><a href="drag.html">drag</a> - <a
+href="https://editor.p5js.org/mattlewis/sketches/yznOohKIj">editor</a></li>
+</ul>
+<hr />
+<h2 id="exercise">Exercise:</h2>
+<ul>
+<li>create a simple array of numbers
+<ul>
+<li>e.g. “var numbers = [5, 3, 7, 2, 9];”</li>
+</ul></li>
+<li>use a loop to step through the numbers:
+<ul>
+<li>e.g. for(var i=0; i&lt;numbers.length; i++) { // use numbers[i]
+}</li>
+</ul></li>
+<li>use each number to control an attribute of a shape (e.g. size,
+color, etc)</li>
+</ul>
+<p>There are more complex <a
+href="http://archive.p5js.org/examples/">Array examples</a> on the
+examples page, but they are pretty challenging. Master the basics above
+first.</p>
+<hr />
+<h2 id="remapping-ranges-of-data-again">Remapping ranges of data
+again:</h2>
+<ul>
+<li>bigger number? more blue, bigger circle, taller triangle</li>
+<li>mapping data to ranges appropriate for color, speed, size, etc</li>
+<li><a href="http://p5js.org/reference/p5/map">map</a>
+<ul>
+<li>percentage data remapped to rotation: “map(value, 0,100,
+0,360)”</li>
+<li>temperature data to color: “map(value, 32,99, 50,255)”</li>
+<li>easier than writing: (((99-32) / 67) * 205) + 50</li>
+<li>map(n, -1.0, 1.0, 0,255);</li>
+</ul></li>
+<li><a href="mapExample.html">map example</a> - <a
+href="https://editor.p5js.org/mattlewis/sketches/gVyYNQQSZ">editor</a></li>
+</ul>
+<hr />
+<h2 id="exercise-1">Exercise:</h2>
+<ul>
+<li>create one array of numbers (just like above example) to use as
+data</li>
+<li>create a function that draws a shape with arguments for size, color,
+and rotation</li>
+<li>call your function once for each data element</li>
+<li>use the map() function with the data to set size, color, and
+rotation for each shape</li>
+<li>e.g. the bigger the number, the bigger, more green, and rotated your
+shape will be</li>
+<li>use lines? text?</li>
+</ul>
+<hr />
+<p><a href="hw3.html">homework 3</a></p>
+</body>
+</html>

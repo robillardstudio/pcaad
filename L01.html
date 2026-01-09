@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>L01</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<p><link href="markdown.css" rel="stylesheet"></link></p>
+<h1 id="introduction">Introduction</h1>
+<hr />
+<h2
+id="programming-concepts-and-applications-for-artists-and-designers">“Programming
+Concepts and Applications for Artists and Designers”</h2>
+<p>The sorts of things we’ll be learning…</p>
+<ul>
+<li>get the computer to use numbers, words, colors, lists</li>
+<li>when THIS happens, then do THAT, otherwise…</li>
+<li>write reusable steps for doing a task</li>
+<li>do the task 1000 times</li>
+<li>…but each time, do it slightly differently</li>
+<li>respond when I click HERE</li>
+<li>read my data from a file, then visualize it</li>
+<li>play a sound, show an image, play a video</li>
+</ul>
+<hr />
+<h2 id="online-materials">Online Materials</h2>
+<p>All materials will be made available through our Carmen class
+pages.</p>
+<p>The class notes and assignments link to web pages I maintain outside
+Carmen so it’s easier for me to show them to people who are not in the
+class when I want to, but you can always get to them from inside
+Carmen.</p>
+<p>I’ll be trying to write these pages to make it easy for you to read
+and review asynchronously, if any of us ever have to miss class.</p>
+<p>Please try to remember that none of us really knows what anyone else
+is dealing with, give each other the benefit of the doubt, and try to be
+kind.</p>
+<hr />
+<h2 id="who">Who?</h2>
+<p>You: quick introductions: academic background/interests, class
+goals</p>
+<p><a href="https://www.asc.ohio-state.edu/robillard.11/">Me</a></p>
+<p>Email (robillard.11@osu.edu) is the best way to reach me.</p>
+<p>I’m always happy to schedule time for us to meet in person or over
+Zoom.</p>
+<hr />
+<h2 id="what">What?</h2>
+<p>Projects:</p>
+<ol type="1">
+<li>drawing with code</li>
+<li>telling the machine what to draw</li>
+<li>interactive drawings from data</li>
+<li>let’s see what happens if…</li>
+<li>explore your interests</li>
+</ol>
+<hr />
+<h2 id="questions">Questions</h2>
+<p>I’d like to know more about your technology situation, and you as a
+student.</p>
+<p>Please <strong>email me</strong> (robillard.11@osu.edu) a sentence or
+two for each of these questions <strong>today</strong> (if any are
+sensitive/private/etc please just skip that question - this is just info
+for me teaching):</p>
+<ol type="1">
+<li>What sort of hardware will you be using for this course? (e.g. ACCAD
+computers, laptop, giant desktop gaming rig, 2 monitors, phone/tablet,
+etc.)</li>
+<li>Will you be using Windows? MacOS? Both?</li>
+<li>Mobile: Do you tend to use Android? iOS? Both?</li>
+<li>What web browser(s) will you be using? Chrome? Safari? Edge?
+Firefox? Other?</li>
+<li>How do you feel about learning programming? (e.g., “It’s going to be
+really hard!”, “It’s just another new thing I haven’t learned yet”, “Not
+sure it’s for people like me”, “This is going to be so much fun!”)</li>
+<li>Anything else you would like me to know about you (name preferences,
+pronouns, course expectations, work habits, challenges, etc.)</li>
+<li>If I want to share your work as an example of the sort of great
+things students create in this class, is that ok? If YES, do you prefer
+that I always use your name, or you’d prefer to stay anonymous, or
+either way is fine with you and I should use my best judgment?</li>
+</ol>
+<hr />
+<h2 id="read-the-syllabus">Read the <a
+href="progSyl.pdf">Syllabus</a></h2>
+<p>The only software <strong>required</strong> for this class is a web
+browser.</p>
+<hr />
+<h2 id="how">How?</h2>
+<p>This class typically involves:</p>
+<ul>
+<li>New concepts lecture (“here’s some big new ideas!”)</li>
+<li>Demonstrations (“here’s code that illustrates the ideas”)</li>
+<li>Questions (please please ask - no one else understood either.
+Really.)</li>
+<li>Exercises (you try it while I help)</li>
+<li>Reading discussions (very rare - just a few all semester)</li>
+</ul>
+<p>The class (or two) before assignments are due will be
+work/help/studio/lab time.</p>
+<hr />
+<h2 id="help">HELP!!!</h2>
+<p>You have several options whenever you’d like some help:</p>
+<ul>
+<li>ask and/or show me in class</li>
+<li>share a link to your code online</li>
+<li>post to a carmen discussion thread</li>
+<li>email me</li>
+<li>Zoom with me and share your screen</li>
+</ul>
+<p>It is always BEST if you can:</p>
+<ol type="1">
+<li>show me your code that is not doing what you want</li>
+<li>tell me what you see it doing that is wrong</li>
+<li>tell me what you are expecting it to do</li>
+<li>tell me what you’re trying to do</li>
+</ol>
+<p>If you email me and say, “my code isn’t working” but don’t show me
+the code, I’ll probably reply asking to see it. (1)</p>
+<p>If you don’t tell me what it’s doing wrong (2) I <em>might</em> reply
+that it looks like it’s doing what you told it to do and ask what you
+expected (3).</p>
+<p>I’d recommend you tell me <em>why</em> you’re doing this because I
+might type up a detailed solution for how to solve your problem (1-3)
+and it’ll turn out that’s not a good solution for what you want to do.
+(4)</p>
+<p>Note that OSU email will refuse to deliver emails that have a
+javascript file attached. You could rename “file.js” to “file.txt” and
+send it, or just cut/paste your code into the body of your email message
+if it’s short, or (BEST) just send me a link to your code online so I
+can run it.</p>
+<hr />
+<h2 id="processing">Processing</h2>
+<p>We’ll be using a programming language called “Processing”. It has a
+long history as a tool that allows artists and designers to “sketch”
+with code.</p>
+<p>Processing is usually implemented using another programming language,
+making it much easier to do things like draw shapes and pictures than it
+would be in that language otherwise.</p>
+<p>We’re going to use “p5.js” which is Processing implemented in
+<em>Javascript</em>, the main programming language used inside web
+browsers.</p>
+<h3 id="brief-history-of-processing-links-books-resources">Brief History
+of Processing, links, books, resources:</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Design_By_Numbers"
+title="DBN">DBN</a>, <a href="https://processing.org"
+title="Processing">Processing</a>, <a href="http://processingjs.org"
+title="processing.js">processing.js</a>, <a
+href="https://android.processing.org" title="p5 android">processing for
+android</a>, <a href="https://py.processing.org"
+title="processing.py">processing.py</a>, <a href="http://p5js.org"
+title="p5.js">p5.js</a></li>
+<li><a
+href="https://www.sitepoint.com/processing-js-vs-p5-js-whats-difference/">Processing.js
+vs P5.js</a></li>
+<li><a
+href="https://library.ohio-state.edu/search~S7?/Xprocessing+lauren&amp;SORT=D&amp;searchscope=7/Xprocessing+lauren&amp;SORT=D&amp;searchscope=7&amp;SUBKEY=processing+lauren/1%2C124%2C124%2CB/frameset&amp;FF=Xprocessing+lauren&amp;SORT=D&amp;searchscope=7&amp;1%2C1%2C">Make:
+Getting Started with p5.js</a> by Lauren McCarthy, Casey Reas, and Ben
+Fry</li>
+<li><a href="https://showcase.p5js.org/#/">Showcase</a></li>
+<li><a href="https://p5js.org/sketches/">Community Sketches</a></li>
+</ul>
+<hr />
+<h2 id="reading">Reading</h2>
+<p>I’d like you to read <a
+href="https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/">What
+is Code by Paul Ford</a> __for discussion next week on Tuesday.</p>
+<p>This is a VERY long VERY good article. 32k words. That’s like 60
+pages. It will take you two hours to read. Don’t try to read it all at
+once unless you really want to.</p>
+<p>This will be the only giant essay I will ever ask you to look at. The
+other few articles this semester are little more than blog posts.</p>
+<p>You can skim as much as you like, but I think you’ll find it
+interesting.</p>
+<p>It talks about what “code” is, why there different programming
+languages, what do programmers even DO, and so on.</p>
+<p>Take some notes to bring to class. I’m going to ask you what you
+found interesting, confusing, annoying, etc.</p>
+<p>Do not try to just remember what you thought: bring written notes and
+opinions.</p>
+<p>Class participation is a <em>big</em> chunk of your grade. The grade
+is based on whether you ask and answer questions, read the readings, ask
+me questions, and make good use of your time in class.</p>
+<hr />
+<h2 id="getting-started-with-p5.js">Getting started with p5.js</h2>
+<p>The web site has been completely updated in the past year with new
+examples, tutorials and URLs! So I am updating all my class materials as
+I go. Please let me know if you spot something in my notes that is still
+broken.</p>
+<ul>
+<li>Tour of the <a href="http://p5js.org" title="p5.js">p5.js</a> web
+site</li>
+<li><a href="http://hello.p5js.org">hello p5js video</a> (working in
+Safari?)</li>
+<li>Exercise: modify numbers in <a
+href="http://p5js.org/examples/">example code</a>
+<ul>
+<li>edit IN the example pages</li>
+<li>stick to short/simple examples</li>
+</ul></li>
+<li><a
+href="https://p5js.org/tutorials/setting-up-your-environment/">How to
+setup your environment</a></li>
+<li><a href="https://p5js.org/tutorials/get-started/">Get
+Started</a></li>
+</ul>
+<hr />
+<h2 id="hw1-assignment"><a href="hw1.html">Hw1 assignment</a></h2>
+<hr />
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>hwSub</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<p><link href="markdown.css" rel="stylesheet"></link></p>
+<h1 id="instructions-for-all-assignments">Instructions for all
+Assignments</h1>
+<h2 id="what-should-i-submit-to-carmen-and-how">What should I submit to
+Carmen (and how)?</h2>
+<ol type="1">
+<li>Submit all of the html, javascript, data, and other files that I
+would need to run your work. If you are using the p5 editor for your
+work, a convenient zip file containing all of these files can be
+downloaded from “File/Download” (if Download is not in the menu see if
+you are logged in.)</li>
+<li>Give me one or more images showing your results (jpegs are
+preferred).</li>
+<li>If your project result is time-based instead of just an image (e.g.,
+involving animation, sound, and/or interaction) then submit a video file
+(mp4 or mov) using your favorite screen capture solution (e.g. OBS or
+quicktime player). Please keep the file size under control.</li>
+<li>Write a little bit about your intent, difficulties, and
+accomplishments. Tell me how you feel about your results. Doc, txt, or
+pdf file please. Less than a page is fine.</li>
+<li>Submit any additional <em>process</em> documentation you’d like me
+to see: notebook sketches, failed ideas you tried, steps along the way,
+work diary, etc.</li>
+<li>ALL of the files mentioned above that you submit to me in Carmen
+should be collected inside ONE <em>zipped</em> folder. Not rar or tar.
+Zip. So you will be only uploading ONE file to Carmen, named something
+like myCoolProject.zip or bob_project_2.zip. All of the things mentioned
+above should be inside this zip file, hopefully well organized and named
+in subfolders, etc.</li>
+<li>When I unzip the (ONE) zip file you submitted to Carmen and look
+inside the resulting folder containing all of your files, it should be
+obvious what I should look at to see and run your work. (Please don’t
+submit 10 things all named like tempFinal3final7.html)</li>
+<li>Your project should run without issues. If files it needs to run are
+missing, or make global path references to your C: drive, then it won’t
+run for me.</li>
+<li>Do not submit your work as just links to web sites (e.g. don’t
+direct me to youtube, notion, miro, p5.js editor, github, etc). I would
+like the actual files for all of the above.</li>
+</ol>
+<p>Did you understand each of those? If not ask me!</p>
+<p>The most common mistakes are:</p>
+<ul>
+<li>submitting several files, instead of one zip file containing all
+your files</li>
+<li>forgetting to do number 2 or 3</li>
+<li>just describing what you made with no reflection, for number 4</li>
+</ul>
+<hr />
+<h2 id="sharing">Sharing</h2>
+<ol type="1">
+<li>Post some documentation: images, video, links, code, questions,
+comments, etc (whatever you’d like to share) in the Teams discussion
+thread for the presentation day, so your classmates can see, review,
+respond, and discuss.</li>
+<li>Everyone will be given ~5 minutes in class to say and show what they
+did. Prepare! Note this is not enough time for a line-by-line code
+review. Show what you did, then briefly mention highlights and
+challenges.</li>
+<li>Everyone is welcome to review, comment, and respond in the Teams
+discussion thread. Unless specific types of critique are requested,
+please err on the side of communicating what worked well and ask
+questions about things you want to know more about.</li>
+</ol>
+<hr />
+<h2 id="grading-rubric">Grading Rubric</h2>
+<p>All requirements minimally completed will result in a “B” base
+grade.</p>
+<p>Grades can be raised by doing the following:</p>
+<ul>
+<li>exceptional commenting and documentation</li>
+<li>exceptional attention to visual design</li>
+<li>exceptional (successful) creative problem solving</li>
+<li>exceptionally interesting ideas</li>
+</ul>
+<p>Grades will be reduced if:</p>
+<ul>
+<li>a part is broken in a way that impacts requirements</li>
+<li>didn’t satisfy or ignored a requirement</li>
+<li>messy hard to follow code (“spaghetti code”)</li>
+<li>work shown not appropriate for time given (document your
+effort)</li>
+<li>you submit work you didn’t create and don’t provide references
+(e.g. copied code)</li>
+</ul>
+<hr />
+<h2 id="borrowing">“Borrowing”</h2>
+<p>In general, do not use code someone else wrote (e.g. from an online
+example or tutorial), without credit/reference, or I may mistakenly
+think you wrote it. You will not get credit for code someone else wrote.
+If the code looks beyond your knowledge, I will have to spend time
+searching for it.</p>
+<p>Usually this happens when a student copies code from a tutorial they
+watched that is not something we have learned how to do yet in class
+(and possibly will not learn about.)</p>
+<p>This is not black and white. At one extreme, a simple one line
+example might show the way that you set the drawing color, or draw a
+line. You may copy that. Putting the URL of where you learned to do
+something is always encouraged. Feel free to ask me if you have any
+doubt.</p>
+<p>On the other hand, consider the case of code that does something
+visually interesting that your viewer will find impressive, mistakenly
+thinking you wrote it (“WOW!”). If you are using the found code because
+it does something you think is interesting, I’d encourage you to not do
+so. If you do so anyways, you MUST give them credit. If you don’t then
+you put yourself at risk. Please see the syllabus for specifics of the
+university academic misconduct policies.</p>
+<p>In short, the more clever someone else’s work is, the less you should
+be using it. In this class I do not want you to start with an idea and
+then find someone’s code that does that. I instead want you to explore
+what YOU can make using the code that YOU are learning to write.</p>
+<p>Even if you reference the person’s work, I would not recommend you
+hand in what is mostly a tutorial or example that you found and modified
+because <em>you will not get credit for code someone else
+wrote.</em></p>
+<p>Please ask me if you have specific questions about this.</p>
+<hr />
+<h2 id="advice">Advice</h2>
+<p><strong>“What can this do? What can I make with that?”</strong></p>
+<ul>
+<li><p>For your first time working with ANY new technology tool, when
+you have a deadline, you will likely have a much better experience if
+you explore its capabilities instead of trying to force a predetermined
+result.</p></li>
+<li><p>Start by figuring out what you <em>can</em> easily do, then work
+with those capabilities, instead of deciding first what you want to do,
+and then trying to figure out how to do it. I will repeat this all
+semester. (“If there’s one thing that I learned in this course it was to
+start with what you know and build on that.” -Student)</p></li>
+</ul>
+<p><strong>“Homework is so time consuming!”</strong></p>
+<ul>
+<li>About six hours per week of outside work is expected (3 credits * 3
+hours/credit - 3 hours in class = 6 hours)</li>
+<li>Try iterative design: get it minimally done, then keep making it
+better.</li>
+</ul>
+<p><strong>“It’s (still) not working!”</strong></p>
+<ul>
+<li>Please seek help or “go around” problems, instead of grinding with
+no progress.</li>
+<li>Email me. Ask that question. It’s probably something small. A few
+minutes could save you hours.</li>
+<li>Make and test small changes to something that works before going
+further.</li>
+<li>Go back to something that worked and compare your changes, line by
+line.</li>
+<li>Always have something that worked previously.</li>
+</ul>
+<p><strong>“My computer died and I had to start over from scratch
+yesterday”</strong></p>
+<ul>
+<li>Please please please make frequent backups, preferably
+automated.</li>
+<li>Don’t keep overwriting the same file. You need to be able to return
+to a previous version when everything stops working.</li>
+</ul>
+<hr />
+<hr />
+</body>
+</html>

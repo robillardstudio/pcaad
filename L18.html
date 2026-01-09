@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>L18</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<p><link href="markdown.css" rel="stylesheet"></link></p>
+<h1 id="image-representation">Image representation</h1>
+<p><a
+href="https://p5js.org/tutorials/animating-with-media-objects/">Animating
+with Media Objects</a></p>
+<hr />
+<h2 id="images-as-arrays-of-pixels">Images as arrays of pixels</h2>
+<p>An <em>Image</em> is less of a <em>programming concept</em> and more
+of a <em>data structure</em> that is particularly useful in our
+art/design domain.</p>
+<p>We’ve learned about colors, arrays, and Objects. Combining them, we
+get p5’s approach to creating, accessing, and filtering <em>Image
+objects</em>.</p>
+<p>The <a href="https://p5js.org/reference/p5/p5.Image/">image class</a>
+has properties that you might expect an image to have, e.g., a width,
+height, and a bunch of pixels that each has a color.</p>
+<p>It also has methods (like functions) that let you check and change
+individual pixels, mask, filter, blend, the image, etc.</p>
+<p>Browse the <a href="https://p5js.org/reference/p5/p5.Image">image
+class</a>.</p>
+<hr />
+<h3 id="image-basics-load-and-display">Image Basics: load and
+display</h3>
+<p>Take a look at: <a
+href="https://archive.p5js.org/examples/image-load-and-display-image.html">Load
+and Display Image example</a>.</p>
+<p>It makes use of the <a
+href="https://p5js.org/reference/p5/loadImage">loadImage
+function</a>.</p>
+<p>Images take time to load, so there are <a
+href="https://p5js.org/reference/p5/loadImage">two ways shown</a> for
+your program to know that the image is finished loading and is ready to
+be used: the preload() function, or a callback function written by
+you.</p>
+<p>As in our previous assignment, since you are asking the web browser
+to go read an external file, if you are running this on just your local
+computer, you probably will need to use a <a
+href="https://github.com/processing/p5.js/wiki/Local-server">local/web
+server</a> (python or chrome extension). If you are using the p5 online
+editor (or other web-based code site) it should work fine.</p>
+<hr />
+<h3 id="using-images">Using Images:</h3>
+<p>This <a href="https://p5js.org/reference/p5/image">image reference
+page</a> gives additional examples showing how to:</p>
+<ul>
+<li>place a whole image someplace on your canvas</li>
+<li>only display part of your image</li>
+<li>place part of your image, someplace on your canvas</li>
+</ul>
+<p>This <a
+href="https://archive.p5js.org/examples/image-background-image.html">background
+image example</a> uses an image with the background() function instead
+of a background color.</p>
+<p>Here’s my example showing an image paint brush: <a
+href="animals.html">animals</a></p>
+<hr />
+<h3 id="changing-images-filters-and-pixels">Changing Images: filters and
+pixels</h3>
+<p>You can <a href="https://p5js.org/reference/p5/tint">tint</a>, <a
+href="https://p5js.org/reference/p5/filter">filter</a>, and <a
+href="https://p5js.org/reference/p5/blend">blend</a> Images.</p>
+<p>Note in these examples the order of tint() and filter() before or
+after image()! Tint acts the way we’re used to (before you draw) while
+filter gets applied to the already-drawn canvas.</p>
+<p>Note I think some people have found some of these processes to be
+very slow (i.e. not something you can do 60 times/second). If you think
+this might be true, see how it behaves at a lower resolution (smaller
+canvas).</p>
+<p>Here are examples showing <a
+href="https://archive.p5js.org/examples/image-transparency.html">transparency</a>
+and <a
+href="https://archive.p5js.org/examples/image-alpha-mask.html">alpha
+masks</a>.</p>
+<p>The color values inside images at specific pixels can be accessed.
+You can <a href="https://p5js.org/reference/p5/get">get</a> the value of
+a pixel based on its (X,Y) location. This <a
+href="https://archive.p5js.org/examples/image-pointillism.html">pointillism
+example</a> uses the get() function to set the circle colors.</p>
+<h3 id="advanced-image-generation">Advanced: Image Generation</h3>
+<p>To access the values of individual pixels (as an array of colors) you
+must first call the <a
+href="https://p5js.org/reference/p5/loadPixels">loadPixels</a>
+function.</p>
+<p>In addition to reading the values of pixels in an image, you can also
+set the colors of individual pixels. (This is a bit like “shaders” which
+a few of you are familiar with.) See these (more advanced) links:</p>
+<ul>
+<li><a
+href="https://archive.p5js.org/examples/image-create-image.html">generative</a>
+expressions (like “shaders”)</li>
+<li><a href="https://p5js.org/reference/p5/createImage">create
+image</a></li>
+<li><a href="https://p5js.org/reference/p5/set">set</a></li>
+<li><a href="pixels.html">pixels</a></li>
+<li><a href="https://p5js.org/reference/p5/p5.Image">p5.Image
+object</a></li>
+</ul>
+<hr />
+<h2 id="exercise">Exercise:</h2>
+<p>Create your own program which does the following:</p>
+<ol type="1">
+<li>load/display a background image</li>
+<li>place/draw smaller images over top of the background</li>
+<li>filter, tint, and/or blend some of the images</li>
+</ol>
+<p>More advanced things you could also try:</p>
+<ul>
+<li>sample image color with get() and then draw with that color</li>
+<li>generate pixel colors in an image (using math!)</li>
+</ul>
+<hr />
+</body>
+</html>

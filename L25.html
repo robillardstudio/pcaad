@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>L25</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<p><link href="markdown.css" rel="stylesheet"></link></p>
+<h1 id="final-assignment">Final Assignment</h1>
+<p><a href="hw5.html">Assignment 5</a>, the Final Project, is your
+opportunity to spend some time on something you are interested in
+learning and/or spending more time working on.</p>
+<p>It’s like a 3 week long programming independent study.</p>
+<p>We’ll do our presentations during our last regularly scheduled
+class.</p>
+<p>Please don’t hesitate to email me if you have questions.</p>
+<hr />
+<h2 id="new-topic-apis">New Topic: APIs</h2>
+<p>So this is interesting stuff but also one of the more challenging
+topics I’ll mention so please don’t be discouraged if it doesn’t Just
+Work for you. Honestly it’s fine if you just read all this and watch the
+video. If you want to give it a try and use it, please do! But don’t
+think of this topic as something that you Have to Figure Out and Do.</p>
+<p>The Big Idea seems very related to the “libraries” we looked at
+recently:</p>
+<ul>
+<li>you’d like some additional functions that give you new
+capabilities</li>
+<li>before, we <em>downloaded</em> a library that made it easier to do
+things like sound, or game sprites, or squiggly drawings</li>
+<li>now we’re going to use something like a “remote library” to get data
+from a web site / server</li>
+</ul>
+<p>Technically, an API is an <a
+href="https://en.wikipedia.org/wiki/Application_programming_interface">Application
+Programming Interface</a>: “It defines the kinds of calls or requests
+that can be made, how to make them, the data formats that should be
+used, the conventions to follow, etc.”</p>
+<p>When you looked at libraries, you read about new functions you could
+now call to get new things to happen… An API tells us the “functions” we
+can call on some remote web server, to get some data we want back. We
+might ask in our code for:</p>
+<ul>
+<li>New York Times article headlines<br />
+</li>
+<li>social media posts that mention a certain word</li>
+<li>a list of GPS coordinates</li>
+<li>data like weather/stocks/statistics/etc</li>
+</ul>
+<h2 id="javascript-objects">Javascript Objects</h2>
+<p>If we’re going to ask a web server to give us data for our program to
+do something with, we’re going to first have to learn how to represent
+data in javascript.</p>
+<p>In javascript when you want to represent data, you often use <a
+href="https://www.w3schools.com/js/js_objects.asp">Javascript
+Objects</a>. Take a look through that link… Javascript Objects are
+simply a list of pairs of property names (“keys”) and values, inside
+curly brackets:</p>
+<pre><code>var person = { name:&quot;Bob&quot;, age:&quot;37&quot;}; 
+var who = person.name;
+print who;  // would print out &quot;Bob&quot;</code></pre>
+<p>The “language” used to write javascript objects is called JSON.</p>
+<h2 id="json-javascript-object-notation">JSON: Javascript Object
+Notation</h2>
+<p>Let’s look at the <a
+href="https://p5js.org/reference/p5/loadJSON/">loadJSON reference
+page</a></p>
+<p>Here’s an exercise to try using JSON:</p>
+<ul>
+<li>Look at <a href="words.json">this json file of mine</a></li>
+<li>Look at how I made these <a href="poem.html">sentences</a> - <a
+href="https://editor.p5js.org/mattlewis/sketches/uxg52iHoX">editor</a></li>
+<li>Modify both to generate your own (bad) <em>random</em> poetry, then
+please share with the class (I mean a bunch of random lines, not “all
+combinations”)</li>
+</ul>
+<hr />
+<h2 id="ajax-and-loadjson">AJAX and loadJSON()</h2>
+<p>Ok… deep breath. Here we go.</p>
+<p>I’m going to give you a pretty nerdy page to look at… <em>please</em>
+ignore anything that mentions XML or JQuery. This is going to talk about
+AJAX… take a look:</p>
+<ul>
+<li><a
+href="https://github.com/processing/p5.js/wiki/Loading-external-files:-AJAX,-XML,-JSON">Loading
+external files: AJAX, XML, JSON</a></li>
+</ul>
+<p>Note the list of APIs at the bottom. Note that these change all the
+time.</p>
+<p>Please feel free to ask lots of questions about anything in there
+that you’re curious about, but note there’s a ton on that page that you
+really don’t need to understand to move forward.</p>
+<p>The <em>most</em> important bit in there is the example that uses
+openweathermap.org, saying, “In addition to local files, loadJSON can
+also load external URLs.” Go back and browse that example again to see
+how these things work.</p>
+<hr />
+<h2 id="using-apis">Using APIs</h2>
+<p>Let’s take a look at the p5 reference page for <a
+href="https://p5js.org/reference/p5/httpDo/">httpDo</a></p>
+<p>It doesn’t seem to be functioning at the moment (API changes?) but we
+can still see how this works:</p>
+<ul>
+<li><p>preload() contains the API’s URL and calls the API to get some
+data (as JSON)</p></li>
+<li><p>draw() checks whether there is any data yet</p></li>
+<li><p>if/when data arrives, find some numbers in the JSON data</p></li>
+<li><p>use those numbers to draw some circles</p></li>
+</ul>
+<hr />
+<p>API URLs frequently contain a long string of letters and numbers
+called a “key” that says who is asking for the data.</p>
+<p>Most sites (e.g. Twitter, FB, NYTimes, Google) require you to get
+your own API Key on their web site by registering for a (free?) account,
+giving your email address, etc. Sometimes they require a credit card
+(“first 1000 are free!”)</p>
+<p>This way they can keep track of how many times you’ve asked, and if
+you start asking for millions of things per second, they can turn off
+your access or start charging you.</p>
+<p>Some APIs do NOT require you to register for your own API key. They
+act just like regular web servers: you ask for a file and they give it
+to you. Look at this example for fetching <a
+href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">earthquake
+data</a></p>
+<hr />
+<p>So… if you’d like to give this a try, much as you did with libraries,
+you’ll need to choose one an API to use.</p>
+<p>For any online service you can think of, there’s probably a page for
+its API that you can google, e.g., I tried “Amazon javascript API” and
+ended up <a href="https://aws.amazon.com/sdk-for-javascript/">here</a>.
+YIKES: these pages however are usually written for professional
+programmers.</p>
+<p>To use an API in your code, you probably need to:</p>
+<ul>
+<li>get an API Key from a web site</li>
+<li>figure out from their documentation what data you can get</li>
+<li>find out what the URL should look like to get that data</li>
+<li>find some example JSON data to see how it is structured</li>
+<li>call their API, with the right URL and your key, and get some JSON
+Data</li>
+<li>pull the data you want out of the JSON they sent you</li>
+<li>use that data to draw stuff!</li>
+</ul>
+<p>If you’d like some additional resources: here’s 15 minutes of Dan
+walking you through a really nice example of going through these steps
+for the <a href="https://www.youtube.com/watch?v=IMne3LY4bks">New York
+Times API</a></p>
+<p>One additional resource you could look if you’d like to read more is
+the <a href="https://library.ohio-state.edu/record=b9490605~S7">Network
+Data and APIs section in chapter 12 of the online p5.js book</a>
+available through the OSU library.</p>
+</body>
+</html>

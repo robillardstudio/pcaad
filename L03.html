@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>L03</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<p><link href="markdown.css" rel="stylesheet"></link></p>
+<h1 id="intro-programming-concepts">Intro programming concepts</h1>
+<hr />
+<h2 id="reading-discussion">Reading discussion:</h2>
+<ul>
+<li><a
+href="https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/">What
+is Code by Paul Ford</a></li>
+<li>questions, comments, thoughts, etc?</li>
+</ul>
+<hr />
+<p>Hoping we can spend much of today working, but just some odds and
+ends in case you find them helpful.</p>
+<p>The programming style we’re using tends to have one “statement” per
+line.</p>
+<p>In most languages that look like this, statements are separated by
+semicolons.</p>
+<p>Javascript, for the most part (say it with me) “Doesn’t Care”…<br />
+(Except sometimes when it does!)</p>
+<p>We’ll be picking up bits of Javascript’s quirks as we go along, but
+we’ll actually tend towards learning general programming concepts
+instead of Javascript’s particular quirks, as much as we can.</p>
+<p>A side effect of this will be you’ll find examples of how to do
+things in Javascript that we are maybe not covering, just fyi.</p>
+<p>Every language has a different specific “syntax” - the rules you have
+to follow when typing words, symbols, etc. (e.g. do you need a semicolon
+at the end of statements?)</p>
+<p>While we will need to learn a bunch of “syntax”, we’re a bit more
+interested in “semantics” - what does this code mean? Eventually we’ll
+probably talk about “algorithms” too.</p>
+<hr />
+<h2 id="a-bit-about-shape-transforms">A bit about shape transforms</h2>
+<p>A thing everyone always asks about eventually: using scale, rotate,
+and translate. This is not really programming knowledge, it’s really
+computer graphics stuff. But here’s a bit of help.</p>
+<p>There are two things you need to consider:</p>
+<ul>
+<li>scale and rotate use the coordinate system’s ORIGIN: (0,0)
+<ul>
+<li>shapes grow (and shrink) from the upper left corner</li>
+<li>shapes rotate around the upper left corner</li>
+</ul></li>
+<li>the order you scale, rotate, translate does different things</li>
+</ul>
+<p>See <a href="https://p5js.org/reference/p5/rotate/">rotate
+reference</a></p>
+<p>It might help to think of a process (“algorithm”) like this:</p>
+<ul>
+<li>create a shape at the origin</li>
+<li>scale it to be the size you want</li>
+<li>rotate the shape so it is oriented how you want</li>
+<li>now move (translate) it where you want it.</li>
+</ul>
+<p>Make sense? You’ve probably worked this way in other software.</p>
+<p>BUT to program this, you’ll write the code backwards! (sorry)</p>
+<pre><code>  translate(width / 2, height / 2);  // move to center
+  rotate(PI / 3.0);                  // rotate 60 degrees
+  scale(4, 1);                       // make it wider
+  rect(-5, -5, 10, 10);              // draw a square centered at (0,0)</code></pre>
+<p>See the bottom of this <a
+href="https://p5js.org/examples/transformation-rotate/">Transform
+example</a></p>
+<p>Also, <a
+href="https://archive.p5js.org/examples/transform-rotate.html">older
+transform example</a></p>
+<p>Think of this the same way as when we use the fill() or stroke()
+color functions. We are changing the <strong>state</strong> of the
+system BEFORE we draw stuff.</p>
+<p>The code above could be read like a poorly told story:</p>
+<ul>
+<li>“WHATEVER we eventually draw, move it to the center!”</li>
+<li>Ok, here’s what we’re going to draw…</li>
+<li>It’s something that should be rotated 60 degrees (“PI/3”
+radians)…</li>
+<li>Ok, here it is…</li>
+<li>Oh and also scale its width by 4…</li>
+<li>It’s a rectangle that was drawn in the upper left corner!</li>
+</ul>
+<p>You could also think of this as like translate( rotate( scale( rect()
+) ) ) but you can’t actually write that.</p>
+<p>You do NOT have to do this for this (or any) assignment. But you may
+find it useful for moving your shapes around, or modifying copies of
+them.</p>
+<p>Some of you might also be interested to read about the <a
+href="https://p5js.org/reference/p5/push/">push()</a> and pop()
+functions.</p>
+<p>Check out the <a
+href="https://p5js.org/examples/transformation-translate/">Translate
+example</a></p>
+<hr />
+<h2 id="odds-and-ends">Odds and Ends:</h2>
+<h3 id="drawing-with-shapes-duolingo-branding-guidelines">Drawing with
+shapes: duolingo branding guidelines</h3>
+<ul>
+<li><a
+href="https://design.duolingo.com/illustration/characters#body-types">characters</a></li>
+<li><a
+href="https://design.duolingo.com/illustration/shape-language#construction">shape
+language</a></li>
+</ul>
+<h3 id="some-other-links-to-consider-and-discuss">Some other links to
+consider and discuss:</h3>
+<ul>
+<li><a
+href="https://p5js.org/tutorials/field-guide-to-debugging/">Debugging</a></li>
+<li><a href="https://p5js.org/reference/p5/describe/">Describe
+LABEL</a></li>
+<li><a
+href="https://archive.p5js.org/examples/math-increment-decrement.html">Increment
+Decrement</a></li>
+</ul>
+<h3 id="using-time">Using “Time”:</h3>
+<ul>
+<li><a
+href="https://p5js.org/reference/p5/frameCount/">frameCount</a></li>
+<li><a href="https://p5js.org/reference/p5/millis/">millis</a></li>
+</ul>
+<hr />
+<h2 id="working-with-web-pages">Working with web pages</h2>
+<p>There are a few pieces of infrastructure that we should mention.</p>
+<h3 id="files-in-local-computer-drives-or-on-a-remote-web-server">Files:
+in local computer drive(s), or on a remote web server</h3>
+<ul>
+<li>html web page files</li>
+<li>javascript code files</li>
+<li>css - style sheets, web layout, interface</li>
+<li>data files (images, sound, video, JSON, CSV data, 3D…)</li>
+</ul>
+<h3 id="web-browser-program-to-run-display-and-debug-web-pages">Web
+browser program to run, display, and debug web pages:</h3>
+<ul>
+<li>Chrome, Safari, Firefox</li>
+<li>Edge, IE, other?</li>
+<li>Mobile vs desktop</li>
+<li>HMD? e.g. Oculus/Meta browser?</li>
+</ul>
+<h3 id="web-servers-distribute-files-to-web-browsers">Web servers:
+distribute files to web browsers</h3>
+<ul>
+<li>editing files online: p5js editor, github, glitch, codepen</li>
+<li>or could be a machine somewhere at OSU</li>
+<li>could be a computer you run (your machine at home, a laptop…)</li>
+<li>can run on the machine you are using, running “locally”</li>
+<li>We will learn how to do this later</li>
+<li><a href="https://github.com/processing/p5.js/wiki/Local-server">in
+chrome</a></li>
+<li><a
+href="https://videlais.com/2019/01/31/using-atom-as-a-live-server/">in
+atom</a></li>
+<li>anyone working on a local computer take note</li>
+<li>only important later when our code starts loading data files</li>
+</ul>
+<hr />
+<h2 id="problem-solving">Problem solving:</h2>
+<ul>
+<li>MANY options for planning, testing, iterating, requirements…
+<ul>
+<li>Typical: make a thing that works a little, then add something</li>
+<li>Plan EVERYTHING out first (for VERY IMPORTANT code)</li>
+<li>test driven: let code help you watch for problems</li>
+<li>collaborate in parallel with others</li>
+<li>Formal <a
+href="https://en.wikipedia.org/wiki/Software_development_process">SDMs</a>:
+waterfall, scrum, agile…</li>
+</ul></li>
+<li>Googling well: forums, <a
+href="http://stackoverflow.com/tags/p5.js/hot">Stack Overflow</a></li>
+<li>Try “Help” BRIEFLY. Browse Examples. Beware “Yak Shaving”</li>
+<li>Time Limits: Done. Improve. Repeat.
+<ul>
+<li><a href="https://www.google.com/search?q=minimum+viable+product">How
+to Build a MVP</a></li>
+<li><a
+href="https://medium.com/@bre/the-cult-of-done-manifesto-724ca1c2ff13">Cult
+of Done</a></li>
+</ul></li>
+</ul>
+<hr />
+<p><a href="hw1.html">hw1</a></p>
+<p>NOTE the assignment asks you to hand in a ZIP file with all of your
+files.</p>
+<p>For those of you using the online p5.js editor, you can ask it to
+export a folder containing all of your files via File -&gt; Download.
+It’s only an option when you are logged in to your account and have
+saved the current project.</p>
+<hr />
+</body>
+</html>
