@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+</head>
+<body>
+<script>
+
+var x = [], y = [], c = [], n = 50, r = 20, dragging = false, drag = -1;
+
+
+function setup() {
+  createCanvas(400,400);
+  ellipseMode(RADIUS);
+  
+  for(var i=0; i<n; i++) {
+    x[i] = random(width);
+    y[i] = random(height);  
+    c[i] = color(random(255), random(255), random(255));
+  }
+}
+
+function draw() {
+  background(100);
+
+  for(var i=0; i < n; i++) { 
+    fill(c[i]);
+    ellipse(x[i], y[i], r, r);  // draw circle
+    
+    if(mouseIsPressed) {
+      if(!dragging && dist(mouseX, mouseY, x[i], y[i]) < r) {  // inside circle
+        dragging = true;  // start dragging a circle    
+        drag = i;  // drag this circle
+      }
+    } else {
+      dragging = false;  // mouse 
+    }
+  }
+  
+  if(dragging) {  // update the circle we're dragging
+    x[drag] = mouseX;  // move circle to mouse location
+    y[drag] = mouseY;
+  }
+}
+</script>
+</body>
+</html>

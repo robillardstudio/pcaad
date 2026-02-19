@@ -1,0 +1,40 @@
+﻿<html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+
+<script>
+
+var img;
+var files = ["bird.png", "camel.png", "deer.png", 
+  "dolphin.png","elephant.png","fish.png","fox.png",
+  "giraffe.png","moose.png","owl.png","pig.png",
+  "snake.png","squirrel.png"];
+var pix = [];
+
+function preload() {
+  img = loadImage("apt.jpg");
+  for(var i=0; i<files.length; i++) {
+    pix[i] = loadImage("pix/" + files[i]);
+  }
+}
+
+function setup() {
+  frameRate(15);
+  createCanvas(546,400);
+  background(img);
+  imageMode(CENTER);
+//  scale(.1, .1);
+}
+
+function draw() {
+  if(mouseIsPressed) {
+    image(pix[floor(random(pix.length))], 
+          mouseX, mouseY,
+          40, 40);
+  }
+}
+
+</script>
+
+
+</html>

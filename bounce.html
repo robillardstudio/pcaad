@@ -1,0 +1,59 @@
+﻿<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+</head>
+<body>
+<script>
+
+var p = [];
+var n = 20;
+var gravity = 0.1;
+
+function setup() {
+  createCanvas(600,600);
+  for(var i=0; i<n; i++) {
+    p[i] = new Particle();
+  }
+}
+
+function draw() {
+  background(128, 10);
+  for(var i=0; i<n; i++) {
+    p[i].move();
+    p[i].draw();
+  }
+}
+
+function Particle() {
+  this.diameter = 20;
+  this.x = 0;
+  this.y = random(height);
+  this.vx = random(1,5);
+  this.vy = random(1,5);
+  this.color = color(128+random(128), 128+random(128), 128+random(128));
+    
+  this.move = function() {
+    this.x += this.vx;
+    this.y += this.vy;
+    
+    this.vy += gravity;
+    
+    if(this.x > width) {  // back to left edge
+      this.x = 0;
+      this.y = random(height);
+      this.vx = random(1,5);
+      this.vy = -random(1,5);
+    } else if(this.y > height) {  // bounce
+      this.vy = -this.vy * .9;
+    }
+  }
+  
+  this.draw = function() {
+    fill(this.color);
+    ellipse(this.x, this.y, this.diameter, this.diameter);
+  }
+}
+
+</script>
+</body>
+</html>

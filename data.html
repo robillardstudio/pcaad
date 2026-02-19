@@ -1,0 +1,44 @@
+﻿<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+</head>
+<body>
+<script>
+
+var data = [200,100,130,15,22,77,180];
+var spacing = 25;
+var shapeWidth = 30;
+
+function setup() {
+  createCanvas(400,400);
+  background(200);
+  translate(22, 10);  // move everything over and down 
+  drawRectangles();
+  translate(0, 300);  // move everything over and down 
+  drawCircles();
+}
+
+function drawRectangles() {
+  push();  
+  for(var i=0; i < data.length; i++) {
+    fill(random(255), random(255), random(255));  // random color
+    rect(0, 0, shapeWidth, data[i]);
+    translate(spacing + shapeWidth, 0);   // move left a bit each time
+  }
+  pop();
+}
+
+function drawCircles() {
+  push();  
+  translate(shapeWidth/2, 0);
+  for(var i=0; i < data.length; i++) {
+    fill(random(255), random(255), random(255));  // random color
+    ellipse(0, 0, data[i]/3, data[i]/3);
+    translate(spacing + shapeWidth, 0);   // move left a bit each time
+  }
+  pop();
+}
+
+</script>
+</body>
+</html>

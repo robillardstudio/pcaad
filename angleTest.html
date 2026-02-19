@@ -1,0 +1,44 @@
+﻿<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+</head>
+<body>
+<script>
+
+var center;
+var angle = 0;
+var turnLimit = 0.02;
+
+function setup() {
+  createCanvas(600,600);
+  center = createVector(width/2, height/2);
+}
+
+function draw() {
+  background(128);
+  strokeWeight(5);  // line width
+
+  var m = createVector(mouseX, mouseY).sub(center);
+  var desiredAngle = m.heading();
+  var desiredTurn = desiredAngle - angle;
+  
+  // always take the short way around (-PI..PI)
+  if(desiredTurn > PI) {
+    desiredTurn = -2*PI + desiredTurn;
+  } else if(-desiredTurn > PI) {
+    desiredTurn = 2*PI + desiredTurn;
+  }
+  
+  var turnAmt = constrain(desiredTurn, -turnLimit, turnLimit);
+  angle += turnAmt;
+    
+  text("angle = " + angle, 20,20);
+
+  translate(center.x, center.y);
+  rotate(angle);
+  line(0,0, width/4, 0);
+}
+
+</script>
+</body>
+</html>

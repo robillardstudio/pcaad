@@ -1,0 +1,26 @@
+﻿<html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+
+<script>
+
+function setup() {
+  createCanvas(400,400);
+  background(50);
+}
+
+function draw() {
+  if(mouseIsPressed) {
+
+    // Transform numbers between zero and "width' (400)
+    // into numbers between 0 and 255.
+    var red = map(mouseX, 0, width, 0, 255)
+    // When the mouse is on the right it will be very red.
+    fill(red, 0, 255-red);
+
+    ellipse(mouseX, mouseY, 20, 20);
+  }
+}
+
+</script>
+</html>

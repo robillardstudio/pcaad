@@ -1,0 +1,39 @@
+﻿<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+</head>
+<body>
+<script>
+
+function setup() {
+  createCanvas(600,600);
+}
+
+function draw() {
+  background(200);
+  fill(255);
+  
+  // t repeats going from zero to 100
+  var t = (frameCount * .2) % 100;
+  var y = map(t, 0,100, 0,height);
+  ellipse(100, y, 50,50);
+  
+  // ping pong
+  if(t < 50) { y = map(t, 0,50, 0,height); }
+  else { y = map(t,50,100, height,0); }
+  ellipse(200, y, 50,50);  
+  
+  // sine curve (ease in/out)
+  y = map(sin(2*PI * t/100), -1,1, 0,height);
+  ellipse(300, y, 50,50);  
+  
+  // irregular motion
+  y = map(noise(0.04 * t), 0,1, 0,height);
+  ellipse(400, y, 50,50);  
+}
+
+
+
+</script>
+</body>
+</html>

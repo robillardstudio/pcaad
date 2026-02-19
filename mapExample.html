@@ -1,0 +1,29 @@
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+</head>
+
+<body>
+<script>
+
+var data = [15,20,40,60,50,33,22,88,17,75];  // set of [0,100] numbers
+var diameter = 50;  // circle size
+
+function setup() {
+    createCanvas(700, 200);  // wide canvas
+    background(128);  // grey background
+    for(var i=0; i<data.length; i++) {  // for every data element…
+      var x = (width / data.length) * (i + 0.5);  // each more to the right
+      var y = map(data[i], 0, 100, height, 0); // % to height
+      var r = map(data[i], 0, 100, 0, 255); // % to redness
+      var b = map(data[i], 0, 100, 255, 0); // % to lack-of-blue
+
+      fill(r,0,b);  // set the color
+      ellipse(x, y, diameter, diameter);  //draw the circle
+    }
+}
+
+</script>
+</body>
+</html>    
+

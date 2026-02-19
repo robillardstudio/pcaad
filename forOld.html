@@ -1,0 +1,31 @@
+﻿<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+</head>
+<body>
+<script>
+var n = 8;
+function setup() {
+  createCanvas(400,100);
+  background(200);
+  var size = 0.5 * (width/n);
+  rectMode(CENTER);
+  for(var i = 0; i < n; i++) {
+    // move right 'i' steps each time...
+    // each step is twice the square's size
+    // add an extra half step so don't start on left edge
+    var x = (0.5 + i) * (2 * size);
+    var y = height / 2.0; // in middle of height
+    drawShapes(x, y, size);
+  }
+}
+
+function drawShapes(x, y, size) {
+  fill(0);
+  rect(x, y, size, size); // make a square
+  fill(255);
+  ellipse(x, y, size/2, size/2); // circle;
+}
+</script>
+</body>
+</html>

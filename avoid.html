@@ -1,0 +1,97 @@
+﻿<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+</head>
+<body>
+<script>
+
+var runner, target, block;
+var attractStrength = 1;
+var repulseStrength = 100;
+var repulseExponent = 1.1;
+
+function setup() {
+  createCanvas(600,600);
+  rectMode(CENTER);
+  runner = new Runner();
+  placeBlockAndTarget();
+}
+
+function draw() {
+  background(128);
+  strokeWeight(5);  // line width
+
+  drawTarget();
+  drawBlock();
+  runner.move();
+  runner.draw();
+}
+
+function drawBlock() {
+    fill(255, 128, 0);
+    rect(block.x, block.y, 30, 30);
+}
+
+function drawTarget() {
+    fill(0);
+    ellipse(target.x, target.y, 20, 20);
+}
+
+function placeBlockAndTarget() {
+  // place half way between target and Runner
+  do {  // if too close, try again
+    target = createVector(random(width), random(height));
+    
+    // ((Target - Runner) * 0.5) + Runner
+    block = p5.Vector.sub(target, runner.pos).mult(0.5).add(runner.pos);
+    block.add(random(-20,20), random(-20,20)); // move off the line a bit
+  } while(p5.Vector.dist(block, target) < 100)  // too close? redo
+}
+
+function Runner() {
+  this.diameter = 20;
+  this.pos = createVector(random(width), random(height));
+  this.dir = (createVector(random(-1,1), random(-1,1))).normalize();
+  this.speed = 3;
+  this.color = 0;
+    
+  this.move = function() {
+    var targetForce = p5.Vector.sub(target, this.pos).normalize(); // target dir
+    targetForce.mult(attractStrength);
+    
+    // greater repulsion force when closer to the block
+    var avoidForce = p5.Vector.sub(this.pos, block).normalize();  // repulse dir`
+    var d = 1/Math.pow(p5.Vector.dist(this.pos, block), repulseExponent);
+    avoidForce.mult(d * repulseStrength);
+    
+    // add the attraction and repulsion forces. Adjust speed.
+    this.dir = p5.Vector.add(targetForce, avoidForce).normalize();
+    this.pos.add(this.dir.mult(this.speed));
+    
+    // if get to target randomly place runner and target again
+    if(dist(this.pos.x, this.pos.y, target.x, target.y) < 10) {
+      this.pos = createVector(random(width), random(height));
+      this.dir = (createVector(random(-1,1), random(-1,1))).normalize();
+      placeBlockAndTarget();
+    }
+  }
+  
+  this.draw = function() {
+    push();
+    fill(this.color);
+    translate(this.pos.x, this.pos.y);
+    rotate(this.dir.heading());
+    stroke(0);
+    line(0, 0, this.diameter * 1.25, 0);  // "nose"
+    noStroke();  // no outlines on circles
+    fill(255);
+    ellipse(0, 0, this.diameter, this.diameter);
+    fill(0);
+    ellipse(0, 0, this.diameter/2, this.diameter/2);
+    pop();
+  }
+}
+
+</script>
+</body>
+</html>

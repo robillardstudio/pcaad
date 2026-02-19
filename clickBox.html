@@ -1,0 +1,32 @@
+﻿<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+</head>
+<body>
+<script>
+
+var rectColor = 150;
+
+function setup() {
+  createCanvas(400,400);
+  background(200);
+}
+
+function draw() {
+  fill(rectColor);
+  rect(100,100, 80,80);
+
+  if(mouseIsPressed &&
+     (mouseX > 100) && (mouseX < 180) &&
+     (mouseY > 100) && (mouseY < 180)
+    )
+  {
+    rectColor = 0;
+  } else {
+    rectColor = 150;
+  }
+}
+
+</script>
+</body>
+</html>

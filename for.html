@@ -1,0 +1,32 @@
+﻿<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+</head>
+<body>
+<script>
+
+function setup() {
+  createCanvas(400,100);
+  background(200);
+  rectMode(CENTER);
+  var n = 8;
+  var stepSize = width / n;
+  var shapeSize = 0.5 * stepSize; 
+  var y = height / 2.0; // verticle middle of canvas
+  for(var i = 0; i < n; i++) {
+    // move right 'i' steps each time...
+    // add an extra half step so don't start on left edge
+    var x = (0.5 + i) * stepSize;
+    drawShapes(x, y, shapeSize);
+  }
+}
+
+function drawShapes(x, y, size) {
+  fill(0);
+  rect(x, y, size, size); // make a square
+  fill(255);
+  ellipse(x, y, size/2, size/2); // circle;
+}
+</script>
+</body>
+</html>

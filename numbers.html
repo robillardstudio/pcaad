@@ -1,0 +1,29 @@
+﻿<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+</head>
+
+<body>
+<script>
+
+var result;
+
+function preload() {
+  result = loadStrings('numbers.txt');
+}
+
+function setup() {
+    createCanvas(50,150);
+    background(200);
+    for(var i=0; i<result.length; i++) {
+        fill(0,0,0);
+        text(result[i], 10, i*10, 80, 80);
+
+        fill(result[i]*20, 0, 255);
+        rect(30, i*10, 10, 10);
+    }
+}
+
+</script>
+</body>
+</html>

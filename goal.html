@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+</head>
+<body>
+<script>
+
+var runner;
+var target;
+
+function setup() {
+  createCanvas(600,600);
+  runner = new Runner();
+  target = createVector(random(width), random(height));
+}
+
+function draw() {
+  background(128);
+  strokeWeight(5);  // line width
+
+  drawTarget();
+  
+  runner.move();
+  runner.draw();
+}
+
+function drawTarget() {
+    fill(0);
+    ellipse(target.x, target.y, 20, 20);
+}
+
+function Runner() {
+  this.diameter = 20;
+  this.pos = createVector(random(width), random(height));
+  this.dir = (createVector(random(-1,1), random(-1,1))).normalize();
+  this.speed = 3;
+  this.color = 0;
+    
+  this.move = function() {
+    this.dir = p5.Vector.sub(target, this.pos).normalize();
+    this.pos.add(this.dir.mult(this.speed));
+    
+    if(dist(this.pos.x, this.pos.y, target.x, target.y) < 10) {
+      this.pos = createVector(random(width), random(height));
+      this.dir = (createVector(random(-1,1), random(-1,1))).normalize();
+      target.set(random(width), random(height));
+    }
+  }
+  
+  this.draw = function() {
+    push();
+    fill(this.color);
+    translate(this.pos.x, this.pos.y);
+    rotate(this.dir.heading());
+    stroke(0);
+    line(0, 0, this.diameter * 1.25, 0);  // "nose"
+    noStroke();  // no outlines on circles
+    fill(255);
+    ellipse(0, 0, this.diameter, this.diameter);
+    fill(0);
+    ellipse(0, 0, this.diameter/2, this.diameter/2);
+    pop();
+  }
+}
+
+</script>
+</body>
+</html>

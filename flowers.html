@@ -1,0 +1,51 @@
+﻿<html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.js"></script>
+
+<script>
+
+var numFlowers = 100;
+
+function setup() {
+  createCanvas(600,600);
+  background(50);
+
+  drawField();
+}
+
+function drawPetal(c) {
+  fill(c);
+  ellipse(150, 0, 300, 100);
+}
+
+function drawFlower(c, nPetals) {
+  
+  // draw petals
+  let angle = 360 / nPetals;
+  for(let i=0; i < nPetals; i++) {
+    rotate( radians(angle) );
+    drawPetal(c);
+  }
+  
+  // draw center
+  fill(255,255,100);
+  ellipse(0,0, 200,200);
+}
+
+function drawField() {
+
+  for(let i=0; i < numFlowers; i++) { 
+    push();
+      translate( random(width), random(height) );
+      scale( random(.05, .15) );
+
+      var petalColor = color(random(50,255), random(255), random(255));
+      var numPetals = round(random(5,12));
+  
+      drawFlower(petalColor, numPetals);
+    pop();
+  }
+}
+
+</script>
+</html>
